@@ -16,8 +16,9 @@ namespace KursovayaBD
             DataSet ds;
             SqlDataAdapter adapter;
             SqlCommandBuilder commandBuilder;
-            string connectionString = @"Data Source=localhost;Initial Catalog=usersdb;Integrated Security=True";
-            string sql = "SELECT * FROM Ticket";
+            string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
+            string connectionString2 = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
+        string sql = "SELECT * FROM Ticket";
         public Form1()
         {
             InitializeComponent();
@@ -59,7 +60,7 @@ namespace KursovayaBD
             else
             {
                 string sql = "";
-                string connectionString = @"Data Source=localhost;Initial Catalog=usersdb;Integrated Security=True";
+                string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
                 if (comboBox1.Text == "Ticket_class")
                 {
                      sql = "SELECT * FROM Ticket WHERE Ticket_class ='"+textBox1.Text+"'";
@@ -105,7 +106,7 @@ namespace KursovayaBD
         private void mainToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 f = new Form1();
-            string connectionString = @"Data Source=localhost;Initial Catalog=usersdb;Integrated Security=True";
+            string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
             string sql = "SELECT * FROM Ticket";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

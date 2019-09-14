@@ -16,7 +16,7 @@ namespace KursovayaBD
         DataSet ds;
         SqlDataAdapter adapter;
         SqlCommandBuilder commandBuilder;
-        string connectionString = @"Data Source=localhost;Initial Catalog=usersdb;Integrated Security=True";
+        string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
         string sql = "SELECT Ticket_class, SUM (Price) FROM Ticket GROUP BY Ticket_class";
 
         public Form9()

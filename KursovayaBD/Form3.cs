@@ -16,7 +16,7 @@ namespace KursovayaBD
         DataSet ds;
         SqlDataAdapter adapter;
         SqlCommandBuilder commandBuilder;
-        string connectionString = @"Data Source=localhost;Initial Catalog=usersdb;Integrated Security=True";
+        string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
         string sql = "SELECT * FROM Flight";
 
         public Form3()
@@ -49,7 +49,7 @@ namespace KursovayaBD
             else
             {
                 string sql = "";
-                string connectionString = @"Data Source=localhost;Initial Catalog=usersdb;Integrated Security=True";
+                string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
                 if (comboBox1.Text == "Category")
                 {
                     sql = "SELECT * FROM Flight WHERE Category ='" + textBox1.Text + "'";

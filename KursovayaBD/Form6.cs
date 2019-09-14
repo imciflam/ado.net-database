@@ -16,7 +16,7 @@ namespace KursovayaBD
         DataSet ds;
         SqlDataAdapter adapter;
         SqlCommandBuilder commandBuilder;
-        string connectionString = @"Data Source=localhost;Initial Catalog=usersdb;Integrated Security=True";
+        string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=pilotsdb;Integrated Security=True";
         string sql = "SELECT * FROM Pilot ORDER BY Pilot_category, Pilot_surname";
 
         public Form6()

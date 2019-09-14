@@ -16,7 +16,7 @@ namespace KursovayaBD
         DataSet ds;
         SqlDataAdapter adapter;
         SqlCommandBuilder commandBuilder;
-        string connectionString = @"Data Source=localhost;Initial Catalog=usersdb;Integrated Security=True";
+        string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
         string sql = "SELECT * FROM Direction";
 
         public Form5()
@@ -59,7 +59,7 @@ namespace KursovayaBD
             else
             {
                 string sql = "";
-                string connectionString = @"Data Source=localhost;Initial Catalog=usersdb;Integrated Security=True";
+                string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
                 if (comboBox1.Text == "Distance")
                 {
                     sql = "SELECT * FROM Direction WHERE Distance ='" + textBox1.Text + "'";
