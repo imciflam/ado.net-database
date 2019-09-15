@@ -8,20 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MaterialSkin.Controls;
+using MaterialSkin;
 
 namespace KursovayaBD
 {
-    public partial class Form1 : Form
-    {
-            DataSet ds;
-            SqlDataAdapter adapter;
-            SqlCommandBuilder commandBuilder;
-            string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
-            string connectionString2 = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
+    public partial class Form1 : MaterialForm
+    { 
+        // adonet
+        DataSet ds;
+        SqlDataAdapter adapter;
+        SqlCommandBuilder commandBuilder;
+        string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
+        // string connectionString2 = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
         string sql = "SELECT * FROM Ticket";
         public Form1()
         {
             InitializeComponent();
+
+            // var materialSkinManager = MaterialSkinManager.Instance;
+            // materialSkinManager.AddFormToManage(this);
+            // materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            //  materialSkinManager.ColorScheme = new ColorScheme(Primary)
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.AllowUserToAddRows = false;
 
@@ -36,7 +44,7 @@ namespace KursovayaBD
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void mbutton1_Click(object sender, EventArgs e)
         {
 
             DataRow row = ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
@@ -51,7 +59,7 @@ namespace KursovayaBD
 
         }
 
-        private void button4_Click(object sender, EventArgs e)//filter button
+        private void mbutton4_Click(object sender, EventArgs e)//filter button
         {
             if (textBox1.Text == "" || comboBox1.Text=="")
             {
@@ -90,7 +98,7 @@ namespace KursovayaBD
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void mbutton3_Click(object sender, EventArgs e)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -119,7 +127,7 @@ namespace KursovayaBD
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void mbutton5_Click(object sender, EventArgs e)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -144,7 +152,7 @@ namespace KursovayaBD
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)//remove
+        private void mbutton2_Click(object sender, EventArgs e)//remove
         {
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
@@ -210,6 +218,41 @@ namespace KursovayaBD
         {
             Form10 f = new Form10();
             f.ShowDialog();
+        }
+
+        private void materialTabSelector1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

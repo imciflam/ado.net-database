@@ -15,7 +15,7 @@ namespace KursovayaBD
     {
         DataSet ds;
         SqlDataAdapter adapter;
-        SqlCommandBuilder commandBuilder;
+        // SqlCommandBuilder commandBuilder;
         string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
         string sql = "SELECT Ticket_class, SUM (Price) AS Total FROM Ticket GROUP BY Ticket_class ";
 

@@ -15,7 +15,7 @@ namespace KursovayaBD
     {
         DataSet ds;
         SqlDataAdapter adapter;
-        SqlCommandBuilder commandBuilder;
+        // SqlCommandBuilder commandBuilder;
         string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
         string sql = "SELECT DISTINCT  Ticket_class, Place, Passenger_surname,Passenger_name, Passenger_middlename FROM Ticket ORDER BY Ticket_class, Place";
 

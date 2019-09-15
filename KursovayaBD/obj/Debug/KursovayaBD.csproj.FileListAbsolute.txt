@@ -20,7 +20,6 @@ C:\Users\Vitalia\source\repos\KursovayaBD\KursovayaBD\obj\Debug\KursovayaBD.Form
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\bin\Debug\KursovayaBD.exe.config
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\bin\Debug\KursovayaBD.exe
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\bin\Debug\KursovayaBD.pdb
-C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.csprojResolveAssemblyReference.cache
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.Form1.resources
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.Form10.resources
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.Form2.resources
@@ -36,3 +35,4 @@ C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\Kursova
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.csproj.CoreCompileInputs.cache
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.exe
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.pdb
+C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\bin\Debug\MaterialSkin.dll

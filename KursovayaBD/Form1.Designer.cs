@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,11 +43,16 @@
             this.calculateRevenueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getInformationAboutPassengersDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.materialContextMenuStrip1 = new MaterialSkin.Controls.MaterialContextMenuStrip();
+            this.materialContextMenuStrip2 = new MaterialSkin.Controls.MaterialContextMenuStrip();
+            this.materialContextMenuStrip3 = new MaterialSkin.Controls.MaterialContextMenuStrip();
+            this.mbutton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.mbutton4 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.mbutton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.mbutton2 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.mbutton5 = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -58,38 +61,19 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 39);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 74);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(534, 294);
+            this.dataGridView1.Size = new System.Drawing.Size(514, 282);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(569, 310);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add ticket";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(635, 310);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(63, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Remove ticket";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mainToolStripMenuItem,
             this.openTableToolStripMenuItem,
             this.queriesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 368);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(788, 24);
             this.menuStrip1.TabIndex = 3;
@@ -190,27 +174,17 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.mbutton3);
+            this.groupBox1.Controls.Add(this.mbutton4);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Location = new System.Drawing.Point(569, 39);
+            this.groupBox1.Location = new System.Drawing.Point(557, 74);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(202, 247);
+            this.groupBox1.Size = new System.Drawing.Size(219, 230);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter by...";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(6, 191);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Restore";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // comboBox1
             // 
@@ -221,7 +195,7 @@
             "Ticket_id"});
             this.comboBox1.Location = new System.Drawing.Point(6, 21);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 21);
+            this.comboBox1.Size = new System.Drawing.Size(207, 21);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -229,38 +203,116 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(6, 79);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
+            this.textBox1.Size = new System.Drawing.Size(207, 20);
             this.textBox1.TabIndex = 2;
             // 
-            // button4
+            // materialContextMenuStrip1
             // 
-            this.button4.Location = new System.Drawing.Point(6, 141);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(92, 23);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Apply";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.materialContextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialContextMenuStrip1.Depth = 0;
+            this.materialContextMenuStrip1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialContextMenuStrip1.Name = "materialContextMenuStrip1";
+            this.materialContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // button5
+            // materialContextMenuStrip2
             // 
-            this.button5.Location = new System.Drawing.Point(704, 310);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(67, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Save";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.materialContextMenuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialContextMenuStrip2.Depth = 0;
+            this.materialContextMenuStrip2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialContextMenuStrip2.Name = "materialContextMenuStrip2";
+            this.materialContextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // materialContextMenuStrip3
+            // 
+            this.materialContextMenuStrip3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialContextMenuStrip3.Depth = 0;
+            this.materialContextMenuStrip3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialContextMenuStrip3.Name = "materialContextMenuStrip3";
+            this.materialContextMenuStrip3.Size = new System.Drawing.Size(61, 4);
+            // 
+            // mbutton1
+            // 
+            this.mbutton1.AutoSize = true;
+            this.mbutton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mbutton1.Depth = 0;
+            this.mbutton1.Location = new System.Drawing.Point(557, 320);
+            this.mbutton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mbutton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mbutton1.Name = "mbutton1";
+            this.mbutton1.Primary = false;
+            this.mbutton1.Size = new System.Drawing.Size(39, 36);
+            this.mbutton1.TabIndex = 6;
+            this.mbutton1.Text = "add";
+            this.mbutton1.UseVisualStyleBackColor = true;
+            this.mbutton1.Click += new System.EventHandler(this.mbutton1_Click);
+            // 
+            // mbutton4
+            // 
+            this.mbutton4.Depth = 0;
+            this.mbutton4.Location = new System.Drawing.Point(6, 133);
+            this.mbutton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mbutton4.Name = "mbutton4";
+            this.mbutton4.Primary = true;
+            this.mbutton4.Size = new System.Drawing.Size(207, 36);
+            this.mbutton4.TabIndex = 7;
+            this.mbutton4.Text = "apply";
+            this.mbutton4.UseVisualStyleBackColor = true;
+            this.mbutton4.Click += new System.EventHandler(this.mbutton4_Click);
+            // 
+            // mbutton3
+            // 
+            this.mbutton3.Depth = 0;
+            this.mbutton3.Location = new System.Drawing.Point(6, 187);
+            this.mbutton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mbutton3.Name = "mbutton3";
+            this.mbutton3.Primary = true;
+            this.mbutton3.Size = new System.Drawing.Size(207, 37);
+            this.mbutton3.TabIndex = 8;
+            this.mbutton3.Text = "Restore";
+            this.mbutton3.UseVisualStyleBackColor = true;
+            this.mbutton3.Click += new System.EventHandler(this.mbutton3_Click);
+            // 
+            // mbutton2
+            // 
+            this.mbutton2.AutoSize = true;
+            this.mbutton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mbutton2.Depth = 0;
+            this.mbutton2.Location = new System.Drawing.Point(629, 320);
+            this.mbutton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mbutton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mbutton2.Name = "mbutton2";
+            this.mbutton2.Primary = false;
+            this.mbutton2.Size = new System.Drawing.Size(66, 36);
+            this.mbutton2.TabIndex = 7;
+            this.mbutton2.Text = "remove";
+            this.mbutton2.UseVisualStyleBackColor = true;
+            this.mbutton2.Click += new System.EventHandler(this.mbutton2_Click);
+            // 
+            // mbutton5
+            // 
+            this.mbutton5.AutoSize = true;
+            this.mbutton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mbutton5.Depth = 0;
+            this.mbutton5.Location = new System.Drawing.Point(730, 320);
+            this.mbutton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mbutton5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mbutton5.Name = "mbutton5";
+            this.mbutton5.Primary = false;
+            this.mbutton5.Size = new System.Drawing.Size(46, 36);
+            this.mbutton5.TabIndex = 8;
+            this.mbutton5.Text = "save";
+            this.mbutton5.UseVisualStyleBackColor = true;
+            this.mbutton5.Click += new System.EventHandler(this.mbutton5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 364);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(788, 392);
+            this.Controls.Add(this.mbutton5);
+            this.Controls.Add(this.mbutton2);
+            this.Controls.Add(this.mbutton1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -280,8 +332,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mainToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openTableToolStripMenuItem;
@@ -298,9 +348,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
+        private MaterialSkin.Controls.MaterialContextMenuStrip materialContextMenuStrip1;
+        private MaterialSkin.Controls.MaterialContextMenuStrip materialContextMenuStrip2;
+        private MaterialSkin.Controls.MaterialContextMenuStrip materialContextMenuStrip3;
+        private MaterialSkin.Controls.MaterialRaisedButton mbutton4;
+        private MaterialSkin.Controls.MaterialFlatButton mbutton1;
+        private MaterialSkin.Controls.MaterialRaisedButton mbutton3;
+        private MaterialSkin.Controls.MaterialFlatButton mbutton2;
+        private MaterialSkin.Controls.MaterialFlatButton mbutton5;
     }
 }
 
