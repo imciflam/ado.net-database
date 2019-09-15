@@ -60,12 +60,12 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(2, 39);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(437, 238);
+            this.dataGridView1.Size = new System.Drawing.Size(534, 294);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(457, 254);
+            this.button1.Location = new System.Drawing.Point(569, 310);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(60, 23);
             this.button1.TabIndex = 1;
@@ -75,9 +75,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(525, 254);
+            this.button2.Location = new System.Drawing.Point(635, 310);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 23);
+            this.button2.Size = new System.Drawing.Size(63, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "Remove ticket";
             this.button2.UseVisualStyleBackColor = true;
@@ -91,7 +91,7 @@
             this.queriesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(665, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(788, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -194,9 +194,9 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Location = new System.Drawing.Point(457, 39);
+            this.groupBox1.Location = new System.Drawing.Point(569, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 183);
+            this.groupBox1.Size = new System.Drawing.Size(202, 247);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter by...";
@@ -204,9 +204,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(6, 143);
+            this.button3.Location = new System.Drawing.Point(6, 191);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(92, 23);
             this.button3.TabIndex = 4;
             this.button3.Text = "Restore";
             this.button3.UseVisualStyleBackColor = true;
@@ -221,22 +221,22 @@
             "Ticket_id"});
             this.comboBox1.Location = new System.Drawing.Point(6, 21);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(177, 21);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 64);
+            this.textBox1.Location = new System.Drawing.Point(6, 79);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(177, 20);
             this.textBox1.TabIndex = 2;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(6, 103);
+            this.button4.Location = new System.Drawing.Point(6, 141);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(92, 23);
             this.button4.TabIndex = 1;
             this.button4.Text = "Apply";
             this.button4.UseVisualStyleBackColor = true;
@@ -244,7 +244,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(590, 254);
+            this.button5.Location = new System.Drawing.Point(704, 310);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(67, 23);
             this.button5.TabIndex = 5;
@@ -256,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 312);
+            this.ClientSize = new System.Drawing.Size(788, 364);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);

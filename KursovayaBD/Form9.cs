@@ -17,7 +17,7 @@ namespace KursovayaBD
         SqlDataAdapter adapter;
         SqlCommandBuilder commandBuilder;
         string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
-        string sql = "SELECT Ticket_class, SUM (Price) FROM Ticket GROUP BY Ticket_class";
+        string sql = "SELECT Ticket_class, SUM (Price) AS Total FROM Ticket GROUP BY Ticket_class ";
 
         public Form9()
         {
@@ -34,6 +34,11 @@ namespace KursovayaBD
                 adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
