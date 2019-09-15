@@ -43,14 +43,14 @@
             this.calculateRevenueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getInformationAboutPassengersDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mbutton3 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.mbutton4 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.materialContextMenuStrip1 = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.materialContextMenuStrip2 = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.materialContextMenuStrip3 = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.mbutton1 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.mbutton4 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.mbutton3 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.mbutton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.mbutton5 = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -100,28 +100,28 @@
             // flightsToolStripMenuItem
             // 
             this.flightsToolStripMenuItem.Name = "flightsToolStripMenuItem";
-            this.flightsToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.flightsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.flightsToolStripMenuItem.Text = "Flights";
             this.flightsToolStripMenuItem.Click += new System.EventHandler(this.flightsToolStripMenuItem_Click);
             // 
             // pilotsToolStripMenuItem
             // 
             this.pilotsToolStripMenuItem.Name = "pilotsToolStripMenuItem";
-            this.pilotsToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.pilotsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pilotsToolStripMenuItem.Text = "Pilots";
             this.pilotsToolStripMenuItem.Click += new System.EventHandler(this.pilotsToolStripMenuItem_Click);
             // 
             // airfractsToolStripMenuItem
             // 
             this.airfractsToolStripMenuItem.Name = "airfractsToolStripMenuItem";
-            this.airfractsToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.airfractsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.airfractsToolStripMenuItem.Text = "Aircrafts";
             this.airfractsToolStripMenuItem.Click += new System.EventHandler(this.airfractsToolStripMenuItem_Click);
             // 
             // directionsToolStripMenuItem
             // 
             this.directionsToolStripMenuItem.Name = "directionsToolStripMenuItem";
-            this.directionsToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.directionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.directionsToolStripMenuItem.Text = "Directions";
             this.directionsToolStripMenuItem.Click += new System.EventHandler(this.directionsToolStripMenuItem_Click);
             // 
@@ -186,6 +186,32 @@
             this.groupBox1.Text = "Filter by...";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // mbutton3
+            // 
+            this.mbutton3.Depth = 0;
+            this.mbutton3.Location = new System.Drawing.Point(6, 187);
+            this.mbutton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mbutton3.Name = "mbutton3";
+            this.mbutton3.Primary = true;
+            this.mbutton3.Size = new System.Drawing.Size(207, 37);
+            this.mbutton3.TabIndex = 8;
+            this.mbutton3.Text = "Restore";
+            this.mbutton3.UseVisualStyleBackColor = true;
+            this.mbutton3.Click += new System.EventHandler(this.mbutton3_Click);
+            // 
+            // mbutton4
+            // 
+            this.mbutton4.Depth = 0;
+            this.mbutton4.Location = new System.Drawing.Point(6, 133);
+            this.mbutton4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mbutton4.Name = "mbutton4";
+            this.mbutton4.Primary = true;
+            this.mbutton4.Size = new System.Drawing.Size(207, 36);
+            this.mbutton4.TabIndex = 7;
+            this.mbutton4.Text = "apply";
+            this.mbutton4.UseVisualStyleBackColor = true;
+            this.mbutton4.Click += new System.EventHandler(this.mbutton4_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -245,32 +271,6 @@
             this.mbutton1.Text = "add";
             this.mbutton1.UseVisualStyleBackColor = true;
             this.mbutton1.Click += new System.EventHandler(this.mbutton1_Click);
-            // 
-            // mbutton4
-            // 
-            this.mbutton4.Depth = 0;
-            this.mbutton4.Location = new System.Drawing.Point(6, 133);
-            this.mbutton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mbutton4.Name = "mbutton4";
-            this.mbutton4.Primary = true;
-            this.mbutton4.Size = new System.Drawing.Size(207, 36);
-            this.mbutton4.TabIndex = 7;
-            this.mbutton4.Text = "apply";
-            this.mbutton4.UseVisualStyleBackColor = true;
-            this.mbutton4.Click += new System.EventHandler(this.mbutton4_Click);
-            // 
-            // mbutton3
-            // 
-            this.mbutton3.Depth = 0;
-            this.mbutton3.Location = new System.Drawing.Point(6, 187);
-            this.mbutton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.mbutton3.Name = "mbutton3";
-            this.mbutton3.Primary = true;
-            this.mbutton3.Size = new System.Drawing.Size(207, 37);
-            this.mbutton3.TabIndex = 8;
-            this.mbutton3.Text = "Restore";
-            this.mbutton3.UseVisualStyleBackColor = true;
-            this.mbutton3.Click += new System.EventHandler(this.mbutton3_Click);
             // 
             // mbutton2
             // 

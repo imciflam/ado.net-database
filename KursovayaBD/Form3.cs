@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MaterialSkin.Controls;
 
 namespace KursovayaBD
 {
-    public partial class Form3 : Form
+    public partial class Form3 : MaterialForm
     {
         DataSet ds;
         SqlDataAdapter adapter;

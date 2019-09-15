@@ -36,3 +36,4 @@ C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\Kursova
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.exe
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.pdb
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\bin\Debug\MaterialSkin.dll
+C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.csprojResolveAssemblyReference.cache
