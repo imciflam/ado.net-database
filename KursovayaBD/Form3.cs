@@ -43,7 +43,9 @@ namespace KursovayaBD
  
         private void button4_Click_1(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || comboBox1.Text == "")
+            try
+            {
+                if (textBox1.Text == "" || comboBox1.Text == "")
             {
                 MessageBox.Show("One of boxes was left empty, try again.");
             }
@@ -68,6 +70,12 @@ namespace KursovayaBD
                     adapter.Fill(ds);
                     dataGridView1.DataSource = ds.Tables[0];
                 }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
+                return;
             }
         }
 
@@ -100,7 +108,9 @@ namespace KursovayaBD
         }
 
         private void button5_Click_1(object sender, EventArgs e)
-        {
+        { 
+            try
+            { 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -115,6 +125,12 @@ namespace KursovayaBD
 
                 adapter.Update(ds);
             }
-        }
+              }
+            catch(SqlException ex)
+            {
+                MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
+                return;
+            }
+}
     }
 }

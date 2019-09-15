@@ -57,28 +57,38 @@ namespace KursovayaBD
 
         private void button5_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                adapter = new SqlDataAdapter(sql, connection);
-                commandBuilder = new SqlCommandBuilder(adapter);
-                adapter.InsertCommand = new SqlCommand("sp_CreatePilot", connection);
-                adapter.InsertCommand.CommandType = CommandType.StoredProcedure;
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_id", SqlDbType.Int, 50, "Pilot_id"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_surname", SqlDbType.VarChar, 50, "Pilot_surname"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_name", SqlDbType.VarChar, 50, "Pilot_name"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_middlename", SqlDbType.VarChar, 50, "Pilot_middlename"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_date_of_birth", SqlDbType.Date, 50, "Pilot_date_of_birth"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_hiring_date", SqlDbType.Date, 50, "Pilot_hiring_date"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_category", SqlDbType.VarChar, 50, "Pilot_category")); 
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    adapter = new SqlDataAdapter(sql, connection);
+                    commandBuilder = new SqlCommandBuilder(adapter);
+                    adapter.InsertCommand = new SqlCommand("sp_CreatePilot", connection);
+                    adapter.InsertCommand.CommandType = CommandType.StoredProcedure;
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_id", SqlDbType.Int, 50, "Pilot_id"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_surname", SqlDbType.VarChar, 50, "Pilot_surname"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_name", SqlDbType.VarChar, 50, "Pilot_name"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_middlename", SqlDbType.VarChar, 50, "Pilot_middlename"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_date_of_birth", SqlDbType.Date, 50, "Pilot_date_of_birth"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_hiring_date", SqlDbType.Date, 50, "Pilot_hiring_date"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_category", SqlDbType.VarChar, 50, "Pilot_category"));
 
-                adapter.Update(ds);
+                    adapter.Update(ds);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
+                return;
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || comboBox1.Text == "")
+            try
+            {
+                if (textBox1.Text == "" || comboBox1.Text == "")
             {
                 MessageBox.Show("One of boxes was left empty, try again.");
             }
@@ -103,6 +113,12 @@ namespace KursovayaBD
                     adapter.Fill(ds);
                     dataGridView1.DataSource = ds.Tables[0];
                 }
+            }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
+                return;
             }
         }
 

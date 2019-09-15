@@ -67,7 +67,9 @@ namespace KursovayaBD
         } 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || comboBox1.Text == "")
+            try
+            {
+                if (textBox1.Text == "" || comboBox1.Text == "")
             {
                 MessageBox.Show("One of boxes was left empty, try again.");
             }
@@ -93,11 +95,19 @@ namespace KursovayaBD
                     dataGridView1.DataSource = ds.Tables[0];
                 }
             }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
+                return;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 adapter = new SqlDataAdapter(sql, connection);
@@ -110,6 +120,12 @@ namespace KursovayaBD
                 adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_date_of_manufacture", SqlDbType.VarChar, 50, "Aircraft_date_of_manufacture"));
 
                 adapter.Update(ds);
+            }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
+                return;
             }
         }
 
