@@ -25,6 +25,9 @@ namespace KursovayaBD
         public Form1()
         {
             InitializeComponent();
+            // menuStrip1.Items.Add("|");
+            // ToolStripSeparator toolStripSeparator = new ExtendedToolStripSeparator();
+            // this.menuStrip1.Add(toolStripSeparator);
 
             // var materialSkinManager = MaterialSkinManager.Instance;
             // materialSkinManager.AddFormToManage(this);
@@ -267,6 +270,11 @@ namespace KursovayaBD
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

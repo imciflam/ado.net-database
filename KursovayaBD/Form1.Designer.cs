@@ -30,18 +30,22 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.mainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.openTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flightsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilotsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.airfractsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.directionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.queriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortPilotsBySurnameAndCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortPassengersByClassAndPlaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.discountInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculateRevenueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getInformationAboutPassengersDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mbutton3 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.mbutton4 = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -68,23 +72,45 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(70)))), ((int)(((byte)(78)))));
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem4,
             this.mainToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.openTableToolStripMenuItem,
-            this.queriesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 368);
+            this.toolStripMenuItem2,
+            this.queriesToolStripMenuItem,
+            this.toolStripMenuItem3});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 367);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(788, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(788, 25);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Enabled = false;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(23, 21);
+            this.toolStripMenuItem4.Text = "|";
             // 
             // mainToolStripMenuItem
             // 
+            this.mainToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mainToolStripMenuItem.Name = "mainToolStripMenuItem";
-            this.mainToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.mainToolStripMenuItem.Size = new System.Drawing.Size(47, 21);
             this.mainToolStripMenuItem.Text = "Main";
             this.mainToolStripMenuItem.Click += new System.EventHandler(this.mainToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Enabled = false;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(23, 21);
+            this.toolStripMenuItem1.Text = "|";
             // 
             // openTableToolStripMenuItem
             // 
@@ -93,37 +119,45 @@
             this.pilotsToolStripMenuItem,
             this.airfractsToolStripMenuItem,
             this.directionsToolStripMenuItem});
+            this.openTableToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.openTableToolStripMenuItem.Name = "openTableToolStripMenuItem";
-            this.openTableToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.openTableToolStripMenuItem.Size = new System.Drawing.Size(79, 21);
             this.openTableToolStripMenuItem.Text = "Open table";
             // 
             // flightsToolStripMenuItem
             // 
             this.flightsToolStripMenuItem.Name = "flightsToolStripMenuItem";
-            this.flightsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.flightsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.flightsToolStripMenuItem.Text = "Flights";
             this.flightsToolStripMenuItem.Click += new System.EventHandler(this.flightsToolStripMenuItem_Click);
             // 
             // pilotsToolStripMenuItem
             // 
             this.pilotsToolStripMenuItem.Name = "pilotsToolStripMenuItem";
-            this.pilotsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pilotsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.pilotsToolStripMenuItem.Text = "Pilots";
             this.pilotsToolStripMenuItem.Click += new System.EventHandler(this.pilotsToolStripMenuItem_Click);
             // 
             // airfractsToolStripMenuItem
             // 
             this.airfractsToolStripMenuItem.Name = "airfractsToolStripMenuItem";
-            this.airfractsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.airfractsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.airfractsToolStripMenuItem.Text = "Aircrafts";
             this.airfractsToolStripMenuItem.Click += new System.EventHandler(this.airfractsToolStripMenuItem_Click);
             // 
             // directionsToolStripMenuItem
             // 
             this.directionsToolStripMenuItem.Name = "directionsToolStripMenuItem";
-            this.directionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.directionsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.directionsToolStripMenuItem.Text = "Directions";
             this.directionsToolStripMenuItem.Click += new System.EventHandler(this.directionsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Enabled = false;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(23, 21);
+            this.toolStripMenuItem2.Text = "|";
             // 
             // queriesToolStripMenuItem
             // 
@@ -133,44 +167,53 @@
             this.discountInformationToolStripMenuItem,
             this.calculateRevenueToolStripMenuItem,
             this.getInformationAboutPassengersDestinationToolStripMenuItem});
+            this.queriesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.queriesToolStripMenuItem.Name = "queriesToolStripMenuItem";
-            this.queriesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.queriesToolStripMenuItem.Size = new System.Drawing.Size(62, 21);
             this.queriesToolStripMenuItem.Text = "Queries";
             // 
             // sortPilotsBySurnameAndCategoryToolStripMenuItem
             // 
             this.sortPilotsBySurnameAndCategoryToolStripMenuItem.Name = "sortPilotsBySurnameAndCategoryToolStripMenuItem";
-            this.sortPilotsBySurnameAndCategoryToolStripMenuItem.Size = new System.Drawing.Size(318, 22);
+            this.sortPilotsBySurnameAndCategoryToolStripMenuItem.Size = new System.Drawing.Size(325, 22);
             this.sortPilotsBySurnameAndCategoryToolStripMenuItem.Text = "Sort pilots by surname and category";
             this.sortPilotsBySurnameAndCategoryToolStripMenuItem.Click += new System.EventHandler(this.sortPilotsBySurnameAndCategoryToolStripMenuItem_Click);
             // 
             // sortPassengersByClassAndPlaceToolStripMenuItem
             // 
             this.sortPassengersByClassAndPlaceToolStripMenuItem.Name = "sortPassengersByClassAndPlaceToolStripMenuItem";
-            this.sortPassengersByClassAndPlaceToolStripMenuItem.Size = new System.Drawing.Size(318, 22);
+            this.sortPassengersByClassAndPlaceToolStripMenuItem.Size = new System.Drawing.Size(325, 22);
             this.sortPassengersByClassAndPlaceToolStripMenuItem.Text = "Sort passengers by class and place";
             this.sortPassengersByClassAndPlaceToolStripMenuItem.Click += new System.EventHandler(this.sortPassengersByClassAndPlaceToolStripMenuItem_Click);
             // 
             // discountInformationToolStripMenuItem
             // 
             this.discountInformationToolStripMenuItem.Name = "discountInformationToolStripMenuItem";
-            this.discountInformationToolStripMenuItem.Size = new System.Drawing.Size(318, 22);
+            this.discountInformationToolStripMenuItem.Size = new System.Drawing.Size(325, 22);
             this.discountInformationToolStripMenuItem.Text = "Discount information";
             this.discountInformationToolStripMenuItem.Click += new System.EventHandler(this.discountInformationToolStripMenuItem_Click);
             // 
             // calculateRevenueToolStripMenuItem
             // 
             this.calculateRevenueToolStripMenuItem.Name = "calculateRevenueToolStripMenuItem";
-            this.calculateRevenueToolStripMenuItem.Size = new System.Drawing.Size(318, 22);
+            this.calculateRevenueToolStripMenuItem.Size = new System.Drawing.Size(325, 22);
             this.calculateRevenueToolStripMenuItem.Text = "Calculate revenue";
             this.calculateRevenueToolStripMenuItem.Click += new System.EventHandler(this.calculateRevenueToolStripMenuItem_Click);
             // 
             // getInformationAboutPassengersDestinationToolStripMenuItem
             // 
             this.getInformationAboutPassengersDestinationToolStripMenuItem.Name = "getInformationAboutPassengersDestinationToolStripMenuItem";
-            this.getInformationAboutPassengersDestinationToolStripMenuItem.Size = new System.Drawing.Size(318, 22);
+            this.getInformationAboutPassengersDestinationToolStripMenuItem.Size = new System.Drawing.Size(325, 22);
             this.getInformationAboutPassengersDestinationToolStripMenuItem.Text = "Get information about passengers\' destination";
             this.getInformationAboutPassengersDestinationToolStripMenuItem.Click += new System.EventHandler(this.getInformationAboutPassengersDestinationToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Enabled = false;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.ShowShortcutKeys = false;
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(23, 21);
+            this.toolStripMenuItem3.Text = "|";
             // 
             // groupBox1
             // 
@@ -178,6 +221,7 @@
             this.groupBox1.Controls.Add(this.mbutton4);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(557, 74);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(219, 230);
@@ -221,7 +265,7 @@
             "Ticket_id"});
             this.comboBox1.Location = new System.Drawing.Point(6, 21);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(207, 21);
+            this.comboBox1.Size = new System.Drawing.Size(207, 23);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -229,7 +273,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(6, 79);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 20);
+            this.textBox1.Size = new System.Drawing.Size(207, 21);
             this.textBox1.TabIndex = 2;
             // 
             // materialContextMenuStrip1
@@ -356,6 +400,10 @@
         private MaterialSkin.Controls.MaterialRaisedButton mbutton3;
         private MaterialSkin.Controls.MaterialFlatButton mbutton2;
         private MaterialSkin.Controls.MaterialFlatButton mbutton5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
     }
 }
 
