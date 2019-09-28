@@ -57,6 +57,7 @@
             this.mbutton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.mbutton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.mbutton5 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -217,6 +218,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.materialRaisedButton1);
             this.groupBox1.Controls.Add(this.mbutton3);
             this.groupBox1.Controls.Add(this.mbutton4);
             this.groupBox1.Controls.Add(this.comboBox1);
@@ -233,7 +235,7 @@
             // mbutton3
             // 
             this.mbutton3.Depth = 0;
-            this.mbutton3.Location = new System.Drawing.Point(6, 187);
+            this.mbutton3.Location = new System.Drawing.Point(6, 148);
             this.mbutton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbutton3.Name = "mbutton3";
             this.mbutton3.Primary = true;
@@ -246,7 +248,7 @@
             // mbutton4
             // 
             this.mbutton4.Depth = 0;
-            this.mbutton4.Location = new System.Drawing.Point(6, 133);
+            this.mbutton4.Location = new System.Drawing.Point(6, 106);
             this.mbutton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbutton4.Name = "mbutton4";
             this.mbutton4.Primary = true;
@@ -348,6 +350,19 @@
             this.mbutton5.UseVisualStyleBackColor = true;
             this.mbutton5.Click += new System.EventHandler(this.mbutton5_Click);
             // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(6, 187);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(207, 37);
+            this.materialRaisedButton1.TabIndex = 9;
+            this.materialRaisedButton1.Text = "Download file";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,6 +419,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
     }
 }
 
