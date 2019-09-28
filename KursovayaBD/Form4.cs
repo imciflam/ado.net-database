@@ -52,7 +52,7 @@ namespace KursovayaBD
                 dataGridView1.Rows.Remove(row);
             }
         }
-         
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -65,42 +65,42 @@ namespace KursovayaBD
                 adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
             }
-        } 
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             try
             {
                 if (textBox1.Text == "" || comboBox1.Text == "")
-            {
-                MessageBox.Show("One of boxes was left empty, try again.");
-            }
-            else
-            {
-                string sql = "";
-                string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
-                if (comboBox1.Text == "Aircraft_type")
                 {
-                    sql = "SELECT * FROM Aircraft WHERE Aircraft_type ='" + textBox1.Text + "'";
-                }
-                else if (comboBox1.Text == "Aircraft_capacity")
-                {
-                    sql = "SELECT * FROM Aircraft WHERE Aircraft_capacity ='" + textBox1.Text + "'";
+                    MessageBox.Show("One of boxes was left empty, try again.");
                 }
                 else
                 {
+                    string sql = "";
+                    string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
+                    if (comboBox1.Text == "Aircraft_type")
+                    {
+                        sql = "SELECT * FROM Aircraft WHERE Aircraft_type ='" + textBox1.Text + "'";
+                    }
+                    else if (comboBox1.Text == "Aircraft_capacity")
+                    {
+                        sql = "SELECT * FROM Aircraft WHERE Aircraft_capacity ='" + textBox1.Text + "'";
+                    }
+                    else
+                    {
                         MessageBox.Show("Not gonna work out. Fill it correctly.");
                         return;
-                }
+                    }
                     Form1 f = new Form1();
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
-                    DataSet ds = new DataSet();
-                    adapter.Fill(ds);
-                    dataGridView1.DataSource = ds.Tables[0];
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                        DataSet ds = new DataSet();
+                        adapter.Fill(ds);
+                        dataGridView1.DataSource = ds.Tables[0];
+                    }
                 }
-            }
             }
             catch (SqlException ex)
             {
@@ -114,19 +114,19 @@ namespace KursovayaBD
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                adapter = new SqlDataAdapter(sql, connection);
-                commandBuilder = new SqlCommandBuilder(adapter);
-                adapter.InsertCommand = new SqlCommand("sp_CreateAircraft", connection);
-                adapter.InsertCommand.CommandType = CommandType.StoredProcedure;
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_id", SqlDbType.Int, 50, "Aircraft_id"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_type", SqlDbType.VarChar, 50, "Aircraft_type"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_capacity", SqlDbType.VarChar, 50, "Aircraft_capacity"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_date_of_manufacture", SqlDbType.VarChar, 50, "Aircraft_date_of_manufacture"));
+                {
+                    connection.Open();
+                    adapter = new SqlDataAdapter(sql, connection);
+                    commandBuilder = new SqlCommandBuilder(adapter);
+                    adapter.InsertCommand = new SqlCommand("sp_CreateAircraft", connection);
+                    adapter.InsertCommand.CommandType = CommandType.StoredProcedure;
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_id", SqlDbType.Int, 50, "Aircraft_id"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_type", SqlDbType.VarChar, 50, "Aircraft_type"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_capacity", SqlDbType.VarChar, 50, "Aircraft_capacity"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_date_of_manufacture", SqlDbType.VarChar, 50, "Aircraft_date_of_manufacture"));
 
-                adapter.Update(ds);
-            }
+                    adapter.Update(ds);
+                }
             }
             catch (SqlException ex)
             {

@@ -57,36 +57,36 @@ namespace KursovayaBD
             try
             {
                 if (textBox1.Text == "" || comboBox1.Text == "")
-            {
-                MessageBox.Show("One of boxes was left empty, try again.");
-            }
-            else
-            {
-                string sql = "";
-                string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
-                if (comboBox1.Text == "Distance")
                 {
-                    sql = "SELECT * FROM Direction WHERE Distance ='" + textBox1.Text + "'";
-                }
-                else if (comboBox1.Text == "Destination")
-                {
-                    sql = "SELECT * FROM Direction WHERE Destination ='" + textBox1.Text + "'";
+                    MessageBox.Show("One of boxes was left empty, try again.");
                 }
                 else
                 {
-                   MessageBox.Show("Not gonna work out. Fill it correctly.");
-                   return;
+                    string sql = "";
+                    string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
+                    if (comboBox1.Text == "Distance")
+                    {
+                        sql = "SELECT * FROM Direction WHERE Distance ='" + textBox1.Text + "'";
+                    }
+                    else if (comboBox1.Text == "Destination")
+                    {
+                        sql = "SELECT * FROM Direction WHERE Destination ='" + textBox1.Text + "'";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not gonna work out. Fill it correctly.");
+                        return;
+                    }
+                    Form1 f = new Form1();
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                        DataSet ds = new DataSet();
+                        adapter.Fill(ds);
+                        dataGridView1.DataSource = ds.Tables[0];
+                    }
                 }
-                 Form1 f = new Form1();
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
-                    DataSet ds = new DataSet();
-                    adapter.Fill(ds);
-                    dataGridView1.DataSource = ds.Tables[0];
-                }
-            }
             }
             catch (SqlException ex)
             {
@@ -113,20 +113,20 @@ namespace KursovayaBD
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                adapter = new SqlDataAdapter(sql, connection);
-                commandBuilder = new SqlCommandBuilder(adapter);
-                adapter.InsertCommand = new SqlCommand("sp_CreateDirection", connection);
-                adapter.InsertCommand.CommandType = CommandType.StoredProcedure;
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Direction_id", SqlDbType.Int, 50, "Direction_id"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Distance", SqlDbType.Int, 50, "Distance"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Destination", SqlDbType.VarChar, 50, "Destination"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Time_of_arrival", SqlDbType.DateTime, 50, "Time_of_arrival"));
-                adapter.InsertCommand.Parameters.Add(new SqlParameter("@Time_of_departure", SqlDbType.DateTime, 50, "Time_of_departure"));
+                {
+                    connection.Open();
+                    adapter = new SqlDataAdapter(sql, connection);
+                    commandBuilder = new SqlCommandBuilder(adapter);
+                    adapter.InsertCommand = new SqlCommand("sp_CreateDirection", connection);
+                    adapter.InsertCommand.CommandType = CommandType.StoredProcedure;
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Direction_id", SqlDbType.Int, 50, "Direction_id"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Distance", SqlDbType.Int, 50, "Distance"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Destination", SqlDbType.VarChar, 50, "Destination"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Time_of_arrival", SqlDbType.DateTime, 50, "Time_of_arrival"));
+                    adapter.InsertCommand.Parameters.Add(new SqlParameter("@Time_of_departure", SqlDbType.DateTime, 50, "Time_of_departure"));
 
-                adapter.Update(ds);
-            }
+                    adapter.Update(ds);
+                }
             }
             catch (SqlException ex)
             {

@@ -90,36 +90,36 @@ namespace KursovayaBD
             try
             {
                 if (textBox1.Text == "" || comboBox1.Text == "")
-            {
-                MessageBox.Show("One of boxes was left empty, try again.");
-            }
-            else
-            {
-                string sql = "";
-                string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=pilotsdb;Integrated Security=True";
-                if (comboBox1.Text == "Pilot_hiring_date")
                 {
-                    sql = "SELECT * FROM Pilot WHERE Pilot_hiring_date ='" + textBox1.Text + "'";
-                }
-                else if (comboBox1.Text == "Pilot_surname")
-                {
-                    sql = "SELECT * FROM Pilot WHERE Pilot_surname ='" + textBox1.Text + "'";
+                    MessageBox.Show("One of boxes was left empty, try again.");
                 }
                 else
                 {
+                    string sql = "";
+                    string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=pilotsdb;Integrated Security=True";
+                    if (comboBox1.Text == "Pilot_hiring_date")
+                    {
+                        sql = "SELECT * FROM Pilot WHERE Pilot_hiring_date ='" + textBox1.Text + "'";
+                    }
+                    else if (comboBox1.Text == "Pilot_surname")
+                    {
+                        sql = "SELECT * FROM Pilot WHERE Pilot_surname ='" + textBox1.Text + "'";
+                    }
+                    else
+                    {
                         MessageBox.Show("Not gonna work out. Fill it correctly.");
                         return;
+                    }
+                    Form1 f = new Form1();
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+                        DataSet ds = new DataSet();
+                        adapter.Fill(ds);
+                        dataGridView1.DataSource = ds.Tables[0];
+                    }
                 }
-                Form1 f = new Form1();
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
-                    DataSet ds = new DataSet();
-                    adapter.Fill(ds);
-                    dataGridView1.DataSource = ds.Tables[0];
-                }
-            }
             }
             catch (SqlException ex)
             {
