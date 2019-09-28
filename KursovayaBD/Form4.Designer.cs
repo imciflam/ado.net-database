@@ -37,6 +37,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -73,20 +75,22 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Location = new System.Drawing.Point(399, 76);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 199);
+            this.groupBox1.Size = new System.Drawing.Size(200, 218);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter by...";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(6, 143);
+            this.button3.Location = new System.Drawing.Point(6, 119);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(188, 23);
             this.button3.TabIndex = 4;
@@ -114,7 +118,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(6, 103);
+            this.button4.Location = new System.Drawing.Point(6, 90);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(188, 23);
             this.button4.TabIndex = 1;
@@ -129,6 +133,26 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(363, 247);
             this.dataGridView1.TabIndex = 9;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(6, 148);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(188, 23);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Save to .xlsx";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(6, 177);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(188, 23);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Save to .txt";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form4
             // 
@@ -160,5 +184,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
     }
 }
