@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using MaterialSkin.Controls;
 using MaterialSkin;
+using System.IO;
 
 namespace KursovayaBD
 {
@@ -281,6 +282,9 @@ namespace KursovayaBD
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                 
             // creating Excel Application  
             Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
             // creating new WorkBook within Excel application  
@@ -312,6 +316,29 @@ namespace KursovayaBD
             workbook.SaveAs("C:\\Users\\Vitalia\\Desktop\\reports\\output.xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
             // Exit from the application  
             app.Quit();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
+        }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            TextWriter writer = new StreamWriter("C:\\Users\\Vitalia\\Desktop\\reports\\text.txt");
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    writer.Write("\t" + dataGridView1.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                }
+                writer.WriteLine("");
+                writer.WriteLine("-------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+            }
+            writer.Close();
+            MessageBox.Show("Data Exported");
+
         }
     }
 }

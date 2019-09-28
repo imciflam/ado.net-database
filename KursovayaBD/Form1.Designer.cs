@@ -58,6 +58,7 @@
             this.mbutton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.mbutton5 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -66,9 +67,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 74);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 74);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(514, 282);
+            this.dataGridView1.Size = new System.Drawing.Size(514, 316);
             this.dataGridView1.TabIndex = 0;
             // 
             // menuStrip1
@@ -84,7 +85,7 @@
             this.toolStripMenuItem2,
             this.queriesToolStripMenuItem,
             this.toolStripMenuItem3});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 367);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 403);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(788, 25);
             this.menuStrip1.TabIndex = 3;
@@ -218,6 +219,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.materialRaisedButton2);
             this.groupBox1.Controls.Add(this.materialRaisedButton1);
             this.groupBox1.Controls.Add(this.mbutton3);
             this.groupBox1.Controls.Add(this.mbutton4);
@@ -226,7 +228,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(557, 74);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(219, 230);
+            this.groupBox1.Size = new System.Drawing.Size(219, 271);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter by...";
@@ -235,26 +237,26 @@
             // mbutton3
             // 
             this.mbutton3.Depth = 0;
-            this.mbutton3.Location = new System.Drawing.Point(6, 148);
+            this.mbutton3.Location = new System.Drawing.Point(6, 139);
             this.mbutton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbutton3.Name = "mbutton3";
             this.mbutton3.Primary = true;
             this.mbutton3.Size = new System.Drawing.Size(207, 37);
             this.mbutton3.TabIndex = 8;
-            this.mbutton3.Text = "Restore";
+            this.mbutton3.Text = "Restore default";
             this.mbutton3.UseVisualStyleBackColor = true;
             this.mbutton3.Click += new System.EventHandler(this.mbutton3_Click);
             // 
             // mbutton4
             // 
             this.mbutton4.Depth = 0;
-            this.mbutton4.Location = new System.Drawing.Point(6, 106);
+            this.mbutton4.Location = new System.Drawing.Point(6, 97);
             this.mbutton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbutton4.Name = "mbutton4";
             this.mbutton4.Primary = true;
             this.mbutton4.Size = new System.Drawing.Size(207, 36);
             this.mbutton4.TabIndex = 7;
-            this.mbutton4.Text = "apply";
+            this.mbutton4.Text = "apply filter";
             this.mbutton4.UseVisualStyleBackColor = true;
             this.mbutton4.Click += new System.EventHandler(this.mbutton4_Click);
             // 
@@ -273,7 +275,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 79);
+            this.textBox1.Location = new System.Drawing.Point(6, 61);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(207, 21);
             this.textBox1.TabIndex = 2;
@@ -307,7 +309,7 @@
             this.mbutton1.AutoSize = true;
             this.mbutton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mbutton1.Depth = 0;
-            this.mbutton1.Location = new System.Drawing.Point(557, 320);
+            this.mbutton1.Location = new System.Drawing.Point(557, 354);
             this.mbutton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbutton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbutton1.Name = "mbutton1";
@@ -323,7 +325,7 @@
             this.mbutton2.AutoSize = true;
             this.mbutton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mbutton2.Depth = 0;
-            this.mbutton2.Location = new System.Drawing.Point(629, 320);
+            this.mbutton2.Location = new System.Drawing.Point(628, 354);
             this.mbutton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbutton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbutton2.Name = "mbutton2";
@@ -339,7 +341,7 @@
             this.mbutton5.AutoSize = true;
             this.mbutton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mbutton5.Depth = 0;
-            this.mbutton5.Location = new System.Drawing.Point(730, 320);
+            this.mbutton5.Location = new System.Drawing.Point(729, 354);
             this.mbutton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbutton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbutton5.Name = "mbutton5";
@@ -353,21 +355,34 @@
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(6, 187);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(6, 182);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
             this.materialRaisedButton1.Size = new System.Drawing.Size(207, 37);
             this.materialRaisedButton1.TabIndex = 9;
-            this.materialRaisedButton1.Text = "Download file";
+            this.materialRaisedButton1.Text = "Save in .xlsx";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
             this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(6, 225);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(207, 37);
+            this.materialRaisedButton2.TabIndex = 10;
+            this.materialRaisedButton2.Text = "Save in .txt";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 392);
+            this.ClientSize = new System.Drawing.Size(788, 428);
             this.Controls.Add(this.mbutton5);
             this.Controls.Add(this.mbutton2);
             this.Controls.Add(this.mbutton1);
@@ -420,6 +435,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
     }
 }
 
