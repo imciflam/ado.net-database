@@ -58,9 +58,14 @@ namespace KursovayaBD
                 {
                     sql = "SELECT * FROM Flight WHERE Category ='" + textBox1.Text + "'";
                 }
-                if (comboBox1.Text == "Company_name")
+                else if (comboBox1.Text == "Company_name")
                 {
                     sql = "SELECT * FROM Flight WHERE Company_name ='" + textBox1.Text + "'";
+                }
+                else
+                {
+                       MessageBox.Show("Not gonna work out. Fill it correctly.");
+                       return;
                 }
                 Form1 f = new Form1();
                 using (SqlConnection connection = new SqlConnection(connectionString))

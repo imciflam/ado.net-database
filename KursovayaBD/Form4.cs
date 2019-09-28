@@ -82,11 +82,16 @@ namespace KursovayaBD
                 {
                     sql = "SELECT * FROM Aircraft WHERE Aircraft_type ='" + textBox1.Text + "'";
                 }
-                if (comboBox1.Text == "Aircraft_capacity")
+                else if (comboBox1.Text == "Aircraft_capacity")
                 {
                     sql = "SELECT * FROM Aircraft WHERE Aircraft_capacity ='" + textBox1.Text + "'";
                 }
-                Form1 f = new Form1();
+                else
+                {
+                        MessageBox.Show("Not gonna work out. Fill it correctly.");
+                        return;
+                }
+                    Form1 f = new Form1();
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();

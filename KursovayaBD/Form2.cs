@@ -101,9 +101,14 @@ namespace KursovayaBD
                 {
                     sql = "SELECT * FROM Pilot WHERE Pilot_hiring_date ='" + textBox1.Text + "'";
                 }
-                if (comboBox1.Text == "Pilot_surname")
+                else if (comboBox1.Text == "Pilot_surname")
                 {
                     sql = "SELECT * FROM Pilot WHERE Pilot_surname ='" + textBox1.Text + "'";
+                }
+                else
+                {
+                        MessageBox.Show("Not gonna work out. Fill it correctly.");
+                        return;
                 }
                 Form1 f = new Form1();
                 using (SqlConnection connection = new SqlConnection(connectionString))

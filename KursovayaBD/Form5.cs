@@ -68,11 +68,16 @@ namespace KursovayaBD
                 {
                     sql = "SELECT * FROM Direction WHERE Distance ='" + textBox1.Text + "'";
                 }
-                if (comboBox1.Text == "Destination")
+                else if (comboBox1.Text == "Destination")
                 {
                     sql = "SELECT * FROM Direction WHERE Destination ='" + textBox1.Text + "'";
                 }
-                Form1 f = new Form1();
+                else
+                {
+                   MessageBox.Show("Not gonna work out. Fill it correctly.");
+                   return;
+                }
+                 Form1 f = new Form1();
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();

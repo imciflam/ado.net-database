@@ -79,13 +79,18 @@ namespace KursovayaBD
                     {
                         sql = "SELECT * FROM Ticket WHERE Ticket_class ='" + textBox1.Text + "'";
                     }
-                    if (comboBox1.Text == "Passenger_surname")
+                    else if (comboBox1.Text == "Passenger_surname")
                     {
                         sql = "SELECT * FROM Ticket WHERE Passenger_surname ='" + textBox1.Text + "'";
                     }
-                    if (comboBox1.Text == "Ticket_id")
+                    else if (comboBox1.Text == "Ticket_id")
                     {
                         sql = "SELECT * FROM Ticket WHERE Ticket_id ='" + textBox1.Text + "'";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not gonna work out. Fill it correctly.");
+                        return;
                     }
                     Form1 f = new Form1();
                     using (SqlConnection connection = new SqlConnection(connectionString))
