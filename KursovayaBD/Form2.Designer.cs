@@ -30,6 +30,8 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -37,8 +39,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,26 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter by...";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(6, 177);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(188, 23);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Save in .txt";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(6, 148);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(188, 23);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Save in .xlsx";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button3
             // 
@@ -133,26 +153,6 @@
             this.button1.Text = "Add ticket";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(6, 148);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(188, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Save in .xlsx";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(6, 177);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(188, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Save in .txt";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form2
             // 

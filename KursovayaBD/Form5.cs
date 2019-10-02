@@ -147,7 +147,7 @@ namespace KursovayaBD
                 // creating new Excelsheet in workbook  
                 Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
                 // see the excel sheet behind the program  
-                app.Visible = true;
+                app.Visible = false;
                 // get the reference of first sheet. By default its name is Sheet1.  
                 // store its reference to worksheet  
                 worksheet = workbook.Sheets["Sheet1"];
@@ -168,7 +168,10 @@ namespace KursovayaBD
                     }
                 }
                 // save the application  
-                workbook.SaveAs("C:\\Users\\Vitalia\\Desktop\\reports\\xlsxdirections.xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                // unix timestamp gen
+                Int32 unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+                MessageBox.Show(unixTimestamp.ToString());
+                workbook.SaveAs("C:\\Users\\Vitalia\\Desktop\\reports\\xlsxdirections" + unixTimestamp.ToString() + ".xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
                 // Exit from the application  
                 MessageBox.Show("Data Exported");
                 app.Quit();
@@ -183,7 +186,7 @@ namespace KursovayaBD
         private void button7_Click(object sender, EventArgs e)
         {
             TextWriter writer = new StreamWriter("C:\\Users\\Vitalia\\Desktop\\reports\\textdirections.txt");
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 for (int j = 0; j < dataGridView1.Columns.Count; j++)
                 {
