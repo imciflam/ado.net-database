@@ -172,8 +172,10 @@ namespace KursovayaBD
                         worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
                     }
                 }
+                Int32 unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+                string timeStamp = unixTimestamp.ToString();
                 // save the application  
-                workbook.SaveAs("C:\\Users\\Vitalia\\Desktop\\reports\\xlsxflights.xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                workbook.SaveAs("C:\\Users\\Vitalia\\Desktop\\reports\\xlsxflights"+ timeStamp+".xlsx", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
                 // Exit from the application  
                 MessageBox.Show("Data Exported");
                 app.Quit();
@@ -187,7 +189,9 @@ namespace KursovayaBD
 
         private void button7_Click(object sender, EventArgs e)
         {
-            TextWriter writer = new StreamWriter("C:\\Users\\Vitalia\\Desktop\\reports\\textflights.txt");
+            Int32 unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+            string timeStamp = unixTimestamp.ToString();
+            TextWriter writer = new StreamWriter("C:\\Users\\Vitalia\\Desktop\\reports\\textflights"+ timeStamp+".txt");
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 for (int j = 0; j < dataGridView1.Columns.Count; j++)
