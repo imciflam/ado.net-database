@@ -36,10 +36,7 @@ namespace KursovayaBD
                 adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
             }
-        }
-
-
-
+        } 
 
 
         private void button4_Click_1(object sender, EventArgs e)

@@ -47,6 +47,8 @@
             this.getInformationAboutPassengersDestinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.mbutton3 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.mbutton4 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -57,8 +59,6 @@
             this.mbutton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.mbutton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.mbutton5 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -234,6 +234,32 @@
             this.groupBox1.Text = "Filter by...";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(6, 225);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(207, 37);
+            this.materialRaisedButton2.TabIndex = 10;
+            this.materialRaisedButton2.Text = "Save in .txt";
+            this.materialRaisedButton2.UseVisualStyleBackColor = true;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
+            // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(6, 182);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(207, 37);
+            this.materialRaisedButton1.TabIndex = 9;
+            this.materialRaisedButton1.Text = "Save in .xlsx";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            // 
             // mbutton3
             // 
             this.mbutton3.Depth = 0;
@@ -352,32 +378,6 @@
             this.mbutton5.UseVisualStyleBackColor = true;
             this.mbutton5.Click += new System.EventHandler(this.mbutton5_Click);
             // 
-            // materialRaisedButton1
-            // 
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(6, 182);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(207, 37);
-            this.materialRaisedButton1.TabIndex = 9;
-            this.materialRaisedButton1.Text = "Save in .xlsx";
-            this.materialRaisedButton1.UseVisualStyleBackColor = true;
-            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
-            // 
-            // materialRaisedButton2
-            // 
-            this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(6, 225);
-            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton2.Name = "materialRaisedButton2";
-            this.materialRaisedButton2.Primary = true;
-            this.materialRaisedButton2.Size = new System.Drawing.Size(207, 37);
-            this.materialRaisedButton2.TabIndex = 10;
-            this.materialRaisedButton2.Text = "Save in .txt";
-            this.materialRaisedButton2.UseVisualStyleBackColor = true;
-            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,8 +404,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mainToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openTableToolStripMenuItem;
@@ -436,6 +434,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

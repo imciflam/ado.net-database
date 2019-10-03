@@ -26,6 +26,8 @@ namespace KursovayaBD
         public Form1()
         {
             InitializeComponent();
+
+            // styling
             // menuStrip1.Items.Add("|");
             // ToolStripSeparator toolStripSeparator = new ExtendedToolStripSeparator();
             // this.menuStrip1.Add(toolStripSeparator);
@@ -51,11 +53,13 @@ namespace KursovayaBD
         private void mbutton1_Click(object sender, EventArgs e)
         {
 
+            Form1_Add fa = new Form1_Add(this);
+            fa.Show();
             DataRow row = ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
             ds.Tables[0].Rows.Add(row);
+            row["Ticket_id"] = 1; // fill em like this
 
-            /*Form2 f = new Form2();
-            f.ShowDialog();*/
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -145,7 +149,7 @@ namespace KursovayaBD
         }
 
         private void mbutton5_Click(object sender, EventArgs e)
-        {
+        { 
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -167,6 +171,7 @@ namespace KursovayaBD
                     adapter.InsertCommand.Parameters.Add(new SqlParameter("@Flight_id", SqlDbType.Int, 50, "Flight_id"));
                     adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_id", SqlDbType.Int, 50, "Aircraft_id"));
                     adapter.InsertCommand.Parameters.Add(new SqlParameter("@Pilot_id", SqlDbType.Int, 50, "Pilot_id"));
+                    // Вызывает соответствующие операторы INSERT, UPDATE или DELETE для каждой вставленной, обновленной или удаленной строки в указанном объекте DataSet, update ds
                     adapter.Update(ds);
                 }
             }

@@ -124,7 +124,7 @@ namespace KursovayaBD
                     adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_type", SqlDbType.VarChar, 50, "Aircraft_type"));
                     adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_capacity", SqlDbType.VarChar, 50, "Aircraft_capacity"));
                     adapter.InsertCommand.Parameters.Add(new SqlParameter("@Aircraft_date_of_manufacture", SqlDbType.VarChar, 50, "Aircraft_date_of_manufacture"));
-
+                    // update dataset
                     adapter.Update(ds);
                 }
             }
