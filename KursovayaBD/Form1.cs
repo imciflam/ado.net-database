@@ -26,7 +26,9 @@ namespace KursovayaBD
         public Form1()
         {
             InitializeComponent();
-
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             // styling
             // menuStrip1.Items.Add("|");
             // ToolStripSeparator toolStripSeparator = new ExtendedToolStripSeparator();

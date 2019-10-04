@@ -226,6 +226,7 @@
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(557, 74);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(219, 271);
@@ -335,6 +336,7 @@
             this.mbutton1.AutoSize = true;
             this.mbutton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mbutton1.Depth = 0;
+            this.mbutton1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mbutton1.Location = new System.Drawing.Point(557, 354);
             this.mbutton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbutton1.MouseState = MaterialSkin.MouseState.HOVER;
