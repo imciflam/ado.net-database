@@ -17,7 +17,10 @@ namespace KursovayaBD
         SqlDataAdapter adapter;
         // SqlCommandBuilder commandBuilder;
         string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
-        string sql = "SELECT Destination, Passenger_surname, Passenger_name, Passenger_middlename  FROM Ticket INNER JOIN Direction on Ticket.Direction_id = Direction.Direction_id ORDER BY Destination, Passenger_surname";
+        string sql = "SELECT Passenger_surname, Passenger_name, Passenger_middlename, Pilot_surname, Pilot_name, Pilot_middlename FROM usersdb.dbo.Ticket " +
+            "INNER JOIN  pilotsdb.dbo.Pilot on usersdb.dbo.Ticket.Pilot_id = pilotsdb.dbo.Pilot.Pilot_id " +
+            "ORDER BY Passenger_surname";
+        // string sql1 = " SELECT * FROM pilotsdb.dbo.Pilot";
         public Form10()
         {
             InitializeComponent();
