@@ -340,6 +340,7 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "Form1_Add";
             this.Text = "Adding a ticket";
             this.ResumeLayout(false);

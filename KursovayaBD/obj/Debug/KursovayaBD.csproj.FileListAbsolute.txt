@@ -39,3 +39,4 @@ C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\bin\Debug\Materia
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.csprojResolveAssemblyReference.cache
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.csproj.ResolveComReference.cache
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.Form1_Add.resources
+C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.Form2_Add.resources

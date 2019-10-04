@@ -22,7 +22,7 @@ namespace KursovayaBD
             this.form1 = form1;
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK; 
             InitializeComponent();
 
             string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
@@ -108,7 +108,7 @@ namespace KursovayaBD
                 row["Flight_id"] = comboBox2.Text;
                 row["Aircraft_id"] = comboBox3.Text;
                 row["Pilot_id"] = comboBox4.Text;
-                MessageBox.Show("Ticket was added successfully.\n Press `save` if you are finished.\n Press `Add` or `Remove` if you are not done.");
+                MessageBox.Show(" Ticket was added successfully.\n Press `save` if you are finished.\n Press `Add` or `Remove` if you are not done.\n Double click any row to edit.");
                 this.Close();
             }
             catch(ArgumentException ex)

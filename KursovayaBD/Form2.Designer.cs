@@ -175,8 +175,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -187,5 +185,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
