@@ -17,7 +17,7 @@ namespace KursovayaBD
     public partial class Form1 : MaterialForm
     {
         // adonet
-        DataSet ds;
+        public DataSet ds;
         SqlDataAdapter adapter;
         SqlCommandBuilder commandBuilder;
         string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
@@ -55,9 +55,9 @@ namespace KursovayaBD
 
             Form1_Add fa = new Form1_Add(this);
             fa.Show();
-            DataRow row = ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
-            ds.Tables[0].Rows.Add(row);
-            row["Ticket_id"] = 1; // fill em like this
+           // DataRow row = ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
+            //ds.Tables[0].Rows.Add(row);
+            //row["Ticket_id"] = 1; // fill em like this
 
 
         }

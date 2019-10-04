@@ -27,22 +27,20 @@ namespace KursovayaBD
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
 
-           // textBox1.Text
-            form1.dataGridView1.Columns.Add("Ticket_id", "1");
-            form1.dataGridView1.Columns.Add("Ticket_class", "First");
-            form1.dataGridView1.Columns.Add("Place", "1");
-            form1.dataGridView1.Columns.Add("Passenger_surname", "1");
-            form1.dataGridView1.Columns.Add("Passenger_name", "1");
-            form1.dataGridView1.Columns.Add("Passenger_middlename", "1");
-            form1.dataGridView1.Columns.Add("Price", "1");
-            form1.dataGridView1.Columns.Add("Discount", "1");
-            form1.dataGridView1.Columns.Add("Direction_id", "3574");
-            form1.dataGridView1.Columns.Add("Flight_id", "1235");
-            form1.dataGridView1.Columns.Add("Aircraft_id", "321");
-            form1.dataGridView1.Columns.Add("Pilot_id", "666999");
-
-            object[] row = new object[] { "1", "Product 1", "1000", "1", "1", "1", "1", "1", "3574", "1235", "321", "666999" };
-
+           // textBox1.Text 
+            DataRow row = form1.ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
+            form1.ds.Tables[0].Rows.Add(row);
+            row["Ticket_id"] = 1; // fill em like this
+            row["Ticket_class"] = 1;
+            row["Place"] = 1;
+            row["Passenger_surname"] = 1;
+            row["Passenger_name"] = 1;
+            row["Price"] = 1;
+            row["Discount"] = 1;
+            row["Direction_id"] = 3574;
+            row["Flight_id"] = 1245;
+            row["Aircraft_id"] = 321;
+            row["Pilot_id"] = 666999;
             // form1.dataGridView1.Rows.Add(row);
 
         }
