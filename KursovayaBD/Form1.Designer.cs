@@ -177,36 +177,36 @@
             // sortPilotsBySurnameAndCategoryToolStripMenuItem
             // 
             this.sortPilotsBySurnameAndCategoryToolStripMenuItem.Name = "sortPilotsBySurnameAndCategoryToolStripMenuItem";
-            this.sortPilotsBySurnameAndCategoryToolStripMenuItem.Size = new System.Drawing.Size(325, 22);
+            this.sortPilotsBySurnameAndCategoryToolStripMenuItem.Size = new System.Drawing.Size(268, 22);
             this.sortPilotsBySurnameAndCategoryToolStripMenuItem.Text = "Sort pilots by surname and category";
             this.sortPilotsBySurnameAndCategoryToolStripMenuItem.Click += new System.EventHandler(this.sortPilotsBySurnameAndCategoryToolStripMenuItem_Click);
             // 
             // sortPassengersByClassAndPlaceToolStripMenuItem
             // 
             this.sortPassengersByClassAndPlaceToolStripMenuItem.Name = "sortPassengersByClassAndPlaceToolStripMenuItem";
-            this.sortPassengersByClassAndPlaceToolStripMenuItem.Size = new System.Drawing.Size(325, 22);
+            this.sortPassengersByClassAndPlaceToolStripMenuItem.Size = new System.Drawing.Size(268, 22);
             this.sortPassengersByClassAndPlaceToolStripMenuItem.Text = "Sort passengers by class and place";
             this.sortPassengersByClassAndPlaceToolStripMenuItem.Click += new System.EventHandler(this.sortPassengersByClassAndPlaceToolStripMenuItem_Click);
             // 
             // discountInformationToolStripMenuItem
             // 
             this.discountInformationToolStripMenuItem.Name = "discountInformationToolStripMenuItem";
-            this.discountInformationToolStripMenuItem.Size = new System.Drawing.Size(325, 22);
+            this.discountInformationToolStripMenuItem.Size = new System.Drawing.Size(268, 22);
             this.discountInformationToolStripMenuItem.Text = "Discount information";
             this.discountInformationToolStripMenuItem.Click += new System.EventHandler(this.discountInformationToolStripMenuItem_Click);
             // 
             // calculateRevenueToolStripMenuItem
             // 
             this.calculateRevenueToolStripMenuItem.Name = "calculateRevenueToolStripMenuItem";
-            this.calculateRevenueToolStripMenuItem.Size = new System.Drawing.Size(325, 22);
+            this.calculateRevenueToolStripMenuItem.Size = new System.Drawing.Size(268, 22);
             this.calculateRevenueToolStripMenuItem.Text = "Calculate revenue";
             this.calculateRevenueToolStripMenuItem.Click += new System.EventHandler(this.calculateRevenueToolStripMenuItem_Click);
             // 
             // getInformationAboutPassengersDestinationToolStripMenuItem
             // 
             this.getInformationAboutPassengersDestinationToolStripMenuItem.Name = "getInformationAboutPassengersDestinationToolStripMenuItem";
-            this.getInformationAboutPassengersDestinationToolStripMenuItem.Size = new System.Drawing.Size(325, 22);
-            this.getInformationAboutPassengersDestinationToolStripMenuItem.Text = "Get information about passengers\' destination";
+            this.getInformationAboutPassengersDestinationToolStripMenuItem.Size = new System.Drawing.Size(268, 22);
+            this.getInformationAboutPassengersDestinationToolStripMenuItem.Text = "Get all passengers with their pilots";
             this.getInformationAboutPassengersDestinationToolStripMenuItem.Click += new System.EventHandler(this.getInformationAboutPassengersDestinationToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3

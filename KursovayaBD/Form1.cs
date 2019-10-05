@@ -114,6 +114,11 @@ namespace KursovayaBD
                 MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
                 return;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
+                return;
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

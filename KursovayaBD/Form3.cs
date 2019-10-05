@@ -15,7 +15,7 @@ namespace KursovayaBD
 {
     public partial class Form3 : MaterialForm
     {
-        DataSet ds;
+        public DataSet ds;
         SqlDataAdapter adapter;
         SqlCommandBuilder commandBuilder;
         string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
@@ -97,8 +97,10 @@ namespace KursovayaBD
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            DataRow row = ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
-            ds.Tables[0].Rows.Add(row);
+            Form3_Add fa = new Form3_Add(this);
+            fa.Show();
+            // DataRow row = ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
+            // ds.Tables[0].Rows.Add(row);
 
         }
 
@@ -130,6 +132,11 @@ namespace KursovayaBD
                 }
             }
             catch (SqlException ex)
+            {
+                MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
+                return;
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
                 return;

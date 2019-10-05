@@ -85,6 +85,11 @@ namespace KursovayaBD
                 MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
                 return;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Exception occured. \n {ex}.\n Please return and retry.");
+                return;
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

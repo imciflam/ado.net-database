@@ -35,7 +35,7 @@ namespace KursovayaBD
                 row["Pilot_date_of_birth"] = textBox5.Text;
                 row["Pilot_hiring_date"] = textBox6.Text;
                 row["Pilot_category"] = textBox7.Text;
-                MessageBox.Show(" Ticket was added successfully.\n Press `save` if you are finished.\n Press `Add` or `Remove` if you are not done.\n Double click any row to edit.");
+                MessageBox.Show(" Pilot was added successfully.\n Press `save` if you are finished.\n Press `Add` or `Remove` if you are not done.\n Double click any row to edit.");
                 this.Close();
             }
             catch (ArgumentException ex)
