@@ -42,3 +42,4 @@ C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\Kursova
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.Form2_Add.resources
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.Form3_Add.resources
 C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.Form4_Add.resources
+C:\Users\Vitalia\Documents\GitHub\ado.net-database\KursovayaBD\obj\Debug\KursovayaBD.Form5_Add.resources
