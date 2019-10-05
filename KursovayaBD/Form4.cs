@@ -16,7 +16,7 @@ namespace KursovayaBD
     public partial class Form4 : MaterialForm
     {
 
-        DataSet ds;
+        public DataSet ds;
         SqlDataAdapter adapter;
         SqlCommandBuilder commandBuilder;
         string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
@@ -41,8 +41,10 @@ namespace KursovayaBD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DataRow row = ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
-            ds.Tables[0].Rows.Add(row);
+            Form4_Add fa = new Form4_Add(this);
+            fa.Show();
+            // DataRow row = ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
+            // ds.Tables[0].Rows.Add(row);
         }
 
         private void button2_Click(object sender, EventArgs e)

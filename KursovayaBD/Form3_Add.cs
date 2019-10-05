@@ -31,7 +31,7 @@ namespace KursovayaBD
                 row["Category"] = textBox2.Text;
                 row["Company_name"] = textBox3.Text;
                 row["Additions"] = textBox4.Text; 
-                MessageBox.Show(" Pilot was added successfully.\n Press `save` if you are finished.\n Press `Add` or `Remove` if you are not done.\n Double click any row to edit.");
+                MessageBox.Show("Flight was added successfully.\n Press `save` if you are finished.\n Press `Add` or `Remove` if you are not done.\n Double click any row to edit.");
                 this.Close();
             }
             catch (ArgumentException ex)
@@ -41,6 +41,11 @@ namespace KursovayaBD
                 {
                     form3.dataGridView1.Rows.RemoveAt(form3.dataGridView1.Rows.Count - 1);
                 }
+                return;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
                 return;
             }
         }
