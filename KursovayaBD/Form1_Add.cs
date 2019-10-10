@@ -142,5 +142,35 @@ namespace KursovayaBD
                 textBox6.Text = "";
             }
         }
+
+        private void materialRaisedButton2_Click(object sender, EventArgs e)
+        {
+            numericUpDown1.Value = 0;
+        }
+
+        private void materialRaisedButton3_Click(object sender, EventArgs e)
+        {
+            numericUpDown2.Value = 0; 
+        }
+
+        private void materialRaisedButton4_Click(object sender, EventArgs e)
+        {
+            textBox4.Text = "";
+        }
+
+        private void materialRaisedButton5_Click(object sender, EventArgs e)
+        {
+            textBox5.Text = ""; 
+        }
+
+        private void materialRaisedButton6_Click(object sender, EventArgs e)
+        {
+            textBox6.Text = ""; 
+        }
+
+        private void materialRaisedButton7_Click(object sender, EventArgs e)
+        { 
+            numericUpDown3.Value = 0;
+        }
     }
 }
