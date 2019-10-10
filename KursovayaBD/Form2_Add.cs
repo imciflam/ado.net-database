@@ -28,19 +28,17 @@ namespace KursovayaBD
         private void button1_Click(object sender, EventArgs e)
         {
             try
-            {
-
-
+            { 
                 // textBox1.Text 
                 DataRow row = form2.ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
                 form2.ds.Tables[0].Rows.Add(row);
-                row["Pilot_id"] = textBox1.Text; // fill em like this
+                row["Pilot_id"] = numericUpDown1.Text; // fill em like this
                 row["Pilot_surname"] = textBox2.Text;
                 row["Pilot_name"] = textBox3.Text;
                 row["Pilot_middlename"] = textBox4.Text;
-                row["Pilot_date_of_birth"] = textBox5.Text;
-                row["Pilot_hiring_date"] = textBox6.Text;
-                row["Pilot_category"] = textBox7.Text;
+                row["Pilot_date_of_birth"] = maskedTextBox1.Text;
+                row["Pilot_hiring_date"] = maskedTextBox2.Text;
+                row["Pilot_category"] = comboBox1.Text;
                 MessageBox.Show(" Pilot was added successfully.\n Press `save` if you are finished.\n Press `Add` or `Remove` if you are not done.\n Double click any row to edit.");
                 this.Close();
             }
@@ -54,6 +52,35 @@ namespace KursovayaBD
                 return;
             }
 
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, "^[a-zA-Z]+$"))
+            {
+                textBox2.Text = "";
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, "^[a-zA-Z]+$"))
+            {
+                textBox3.Text = "";
+            }
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, "^[a-zA-Z]+$"))
+            {
+                textBox4.Text = "";
+            }
         }
     }
 }

@@ -23,8 +23,7 @@ namespace KursovayaBD
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK; 
-            InitializeComponent();
-
+            InitializeComponent(); 
             string connectionString = @"Data Source=DESKTOP-72MPP4U\SQLEXPRESS;Initial Catalog=usersdb;Integrated Security=True";
             using (SqlConnection saConn = new SqlConnection(connectionString))
             {
@@ -82,10 +81,7 @@ namespace KursovayaBD
                 saConn.Close();
             } 
             }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
+         
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
@@ -96,13 +92,13 @@ namespace KursovayaBD
                 // textBox1.Text 
                 DataRow row = form1.ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
                 form1.ds.Tables[0].Rows.Add(row);
-                row["Ticket_id"] = textBox1.Text; // fill em like this
-                row["Ticket_class"] = textBox2.Text;
-                row["Place"] = textBox3.Text;
+                row["Ticket_id"] = numericUpDown1.Value; // fill em like this
+                row["Ticket_class"] = comboBox5.Text;
+                row["Place"] = numericUpDown2.Value;
                 row["Passenger_surname"] = textBox4.Text;
                 row["Passenger_name"] = textBox5.Text;
                 row["Passenger_middlename"] = textBox6.Text;
-                row["Price"] = textBox7.Text;
+                row["Price"] = numericUpDown3.Value;
                 row["Discount"] = materialCheckBox1.Checked.ToString();
                 row["Direction_id"] = comboBox1.Text;
                 row["Flight_id"] = comboBox2.Text;
@@ -121,6 +117,30 @@ namespace KursovayaBD
                 return;
             }
 
+        } 
+        private void textBox4_TextChanged_1(object sender, EventArgs e)
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, "^[a-zA-Z]+$"))
+            {
+                textBox4.Text = "";
+            } 
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox5.Text, "^[a-zA-Z]+$"))
+            {
+                textBox5.Text = "";
+            }
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        { 
+            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, "^[a-zA-Z]+$"))
+            {
+                textBox6.Text = "";
+            }
         }
     }
 }
