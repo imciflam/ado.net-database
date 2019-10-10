@@ -29,7 +29,7 @@ namespace KursovayaBD
 
                 DataRow row = form5.ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
                 form5.ds.Tables[0].Rows.Add(row);
-                row["Direction_id"] = textBox1.Text; // fill em like this
+                row["Direction_id"] = numericUpDown1.Value; // fill em like this
                 row["Distance"] = textBox2.Text;
                 row["Destination"] = textBox3.Text;
                 row["Time_of_arrival"] = textBox4.Text;

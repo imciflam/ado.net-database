@@ -41,7 +41,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(49, 250);
+            this.button1.Location = new System.Drawing.Point(49, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 23);
             this.button1.TabIndex = 0;
@@ -51,28 +51,28 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(135, 46);
+            this.textBox1.Location = new System.Drawing.Point(135, 80);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(135, 96);
+            this.textBox2.Location = new System.Drawing.Point(135, 130);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(135, 142);
+            this.textBox3.Location = new System.Drawing.Point(135, 176);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 3;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(135, 190);
+            this.textBox4.Location = new System.Drawing.Point(135, 224);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 4;
@@ -80,7 +80,7 @@
             // Flight_id
             // 
             this.Flight_id.AutoSize = true;
-            this.Flight_id.Location = new System.Drawing.Point(46, 49);
+            this.Flight_id.Location = new System.Drawing.Point(46, 83);
             this.Flight_id.Name = "Flight_id";
             this.Flight_id.Size = new System.Drawing.Size(46, 13);
             this.Flight_id.TabIndex = 5;
@@ -89,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 99);
+            this.label1.Location = new System.Drawing.Point(47, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 6;
@@ -98,7 +98,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 145);
+            this.label2.Location = new System.Drawing.Point(46, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 7;
@@ -107,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 190);
+            this.label3.Location = new System.Drawing.Point(47, 224);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 8;
