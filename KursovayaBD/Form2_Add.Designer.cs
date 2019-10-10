@@ -48,7 +48,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 115);
+            this.textBox2.Location = new System.Drawing.Point(190, 115);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(118, 141);
+            this.textBox3.Location = new System.Drawing.Point(190, 141);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 2;
@@ -64,7 +64,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(118, 167);
+            this.textBox4.Location = new System.Drawing.Point(190, 167);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 3;
@@ -72,7 +72,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(21, 282);
+            this.button1.Location = new System.Drawing.Point(61, 322);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(197, 23);
             this.button1.TabIndex = 4;
@@ -152,7 +152,7 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(118, 193);
+            this.maskedTextBox1.Location = new System.Drawing.Point(190, 193);
             this.maskedTextBox1.Mask = "00/00/00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
@@ -162,7 +162,7 @@
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(118, 219);
+            this.maskedTextBox2.Location = new System.Drawing.Point(190, 219);
             this.maskedTextBox2.Mask = "00/00/00";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
@@ -177,23 +177,23 @@
             "1",
             "2",
             "3"});
-            this.comboBox1.Location = new System.Drawing.Point(118, 245);
+            this.comboBox1.Location = new System.Drawing.Point(190, 245);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(99, 21);
             this.comboBox1.TabIndex = 17;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(118, 89);
+            this.numericUpDown1.Location = new System.Drawing.Point(190, 90);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(99, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
             this.numericUpDown1.TabIndex = 18;
             // 
             // Form2_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(239, 338);
+            this.ClientSize = new System.Drawing.Size(318, 375);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.maskedTextBox2);

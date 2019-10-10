@@ -29,8 +29,8 @@ namespace KursovayaBD
                  
                 DataRow row = form3.ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
                 form3.ds.Tables[0].Rows.Add(row);
-                row["Flight_id"] = textBox1.Text; // fill em like this
-                row["Category"] = textBox2.Text;
+                row["Flight_id"] = numericUpDown1.Value; // fill em like this
+                row["Category"] = comboBox1.Text;
                 row["Company_name"] = textBox3.Text;
                 row["Additions"] = textBox4.Text; 
                 MessageBox.Show("Flight was added successfully.\n Press `save` if you are finished.\n Press `Add` or `Remove` if you are not done.\n Double click any row to edit.");

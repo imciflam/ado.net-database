@@ -32,7 +32,7 @@ namespace KursovayaBD
                 // textBox1.Text 
                 DataRow row = form2.ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
                 form2.ds.Tables[0].Rows.Add(row);
-                row["Pilot_id"] = numericUpDown1.Text; // fill em like this
+                row["Pilot_id"] = numericUpDown1.Value; // fill em like this
                 row["Pilot_surname"] = textBox2.Text;
                 row["Pilot_name"] = textBox3.Text;
                 row["Pilot_middlename"] = textBox4.Text;

@@ -28,7 +28,7 @@ namespace KursovayaBD
 
                 DataRow row = form4.ds.Tables[0].NewRow(); // добавляем новую строку в DataTable
                 form4.ds.Tables[0].Rows.Add(row);
-                row["Aircraft_id"] = textBox1.Text; // fill em like this
+                row["Aircraft_id"] = numericUpDown1.Value; // fill em like this
                 row["Aircraft_type"] = textBox2.Text;
                 row["Aircraft_capacity"] = textBox3.Text;
                 row["Aircraft_date_of_manufacture"] = textBox4.Text;
