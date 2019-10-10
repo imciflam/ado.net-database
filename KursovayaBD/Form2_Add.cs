@@ -1,4 +1,7 @@
-﻿using System;
+﻿ 
+using MaterialSkin.Controls;
+using MaterialSkin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +13,14 @@ using System.Windows.Forms;
 
 namespace KursovayaBD
 {
-    public partial class Form2_Add : Form
+    public partial class Form2_Add : MaterialForm
     {
         private Form2 form2;
         public Form2_Add(Form2 form2)
-        {
+        { 
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             this.form2 = form2;
             InitializeComponent();
         }

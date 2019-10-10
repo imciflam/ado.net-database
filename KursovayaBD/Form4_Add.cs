@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
+using MaterialSkin;
 
 namespace KursovayaBD
 {
-    public partial class Form4_Add : Form
+    public partial class Form4_Add : MaterialForm
     {
         private Form4 form4;
         public Form4_Add(Form4 form4)
