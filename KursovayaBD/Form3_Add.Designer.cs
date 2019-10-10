@@ -37,6 +37,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.materialRaisedButton2 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton3 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,11 +130,59 @@
             this.comboBox1.Size = new System.Drawing.Size(100, 21);
             this.comboBox1.TabIndex = 10;
             // 
+            // materialRaisedButton2
+            // 
+            this.materialRaisedButton2.BackColor = System.Drawing.SystemColors.Control;
+            this.materialRaisedButton2.Depth = 0;
+            this.materialRaisedButton2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.materialRaisedButton2.Location = new System.Drawing.Point(255, 81);
+            this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton2.Name = "materialRaisedButton2";
+            this.materialRaisedButton2.Primary = true;
+            this.materialRaisedButton2.Size = new System.Drawing.Size(17, 20);
+            this.materialRaisedButton2.TabIndex = 31;
+            this.materialRaisedButton2.Text = "x";
+            this.materialRaisedButton2.UseVisualStyleBackColor = false;
+            this.materialRaisedButton2.Click += new System.EventHandler(this.materialRaisedButton2_Click);
+            // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.BackColor = System.Drawing.SystemColors.Control;
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(255, 176);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(17, 20);
+            this.materialRaisedButton1.TabIndex = 32;
+            this.materialRaisedButton1.Text = "x";
+            this.materialRaisedButton1.UseVisualStyleBackColor = false;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
+            // 
+            // materialRaisedButton3
+            // 
+            this.materialRaisedButton3.BackColor = System.Drawing.SystemColors.Control;
+            this.materialRaisedButton3.Depth = 0;
+            this.materialRaisedButton3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.materialRaisedButton3.Location = new System.Drawing.Point(255, 224);
+            this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton3.Name = "materialRaisedButton3";
+            this.materialRaisedButton3.Primary = true;
+            this.materialRaisedButton3.Size = new System.Drawing.Size(17, 20);
+            this.materialRaisedButton3.TabIndex = 33;
+            this.materialRaisedButton3.Text = "x";
+            this.materialRaisedButton3.UseVisualStyleBackColor = false;
+            this.materialRaisedButton3.Click += new System.EventHandler(this.materialRaisedButton3_Click);
+            // 
             // Form3_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 319);
+            this.Controls.Add(this.materialRaisedButton3);
+            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.materialRaisedButton2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label3);
@@ -160,5 +211,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton2;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton3;
     }
 }
