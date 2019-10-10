@@ -32,8 +32,8 @@ namespace KursovayaBD
                 row["Direction_id"] = numericUpDown1.Value; // fill em like this
                 row["Distance"] = textBox2.Text;
                 row["Destination"] = textBox3.Text;
-                row["Time_of_arrival"] = textBox4.Text;
-                row["Time_of_departure"] = textBox5.Text;
+                row["Time_of_arrival"] = maskedTextBox2.Text;
+                row["Time_of_departure"] = maskedTextBox3.Text;
                 MessageBox.Show(" Direction was added successfully.\n Press `save` if you are finished.\n Press `Add` or `Remove` if you are not done.\n Double click any row to edit.");
                 this.Close();
             }

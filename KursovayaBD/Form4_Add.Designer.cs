@@ -32,12 +32,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Flight_id = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -76,13 +77,6 @@
             this.Flight_id.TabIndex = 14;
             this.Flight_id.Text = "Aircraft_id";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(142, 169);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(142, 123);
@@ -92,11 +86,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(56, 277);
+            this.button1.Location = new System.Drawing.Point(37, 268);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 23);
+            this.button1.Size = new System.Drawing.Size(205, 23);
             this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
+            this.button1.Text = "add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -116,23 +110,31 @@
             this.maskedTextBox1.TabIndex = 19;
             this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(142, 170);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(100, 20);
+            this.numericUpDown2.TabIndex = 20;
+            // 
             // Form4_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 312);
+            this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Flight_id);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
             this.Name = "Form4_Add";
             this.Text = "Adding an aircraft";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,10 +146,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Flight_id;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
     }
 }

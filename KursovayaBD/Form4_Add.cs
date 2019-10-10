@@ -30,7 +30,7 @@ namespace KursovayaBD
                 form4.ds.Tables[0].Rows.Add(row);
                 row["Aircraft_id"] = numericUpDown1.Value; // fill em like this
                 row["Aircraft_type"] = textBox2.Text;
-                row["Aircraft_capacity"] = textBox3.Text;
+                row["Aircraft_capacity"] = numericUpDown2.Text;
                 row["Aircraft_date_of_manufacture"] = maskedTextBox1.Text;
                 MessageBox.Show(" Aircraft was added successfully.\n Press `save` if you are finished.\n Press `Add` or `Remove` if you are not done.\n Double click any row to edit.");
                 this.Close();

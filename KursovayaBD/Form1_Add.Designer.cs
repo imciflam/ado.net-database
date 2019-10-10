@@ -325,7 +325,7 @@
             this.comboBox5.Items.AddRange(new object[] {
             "First",
             "Business",
-            "Econom"});
+            "Economy"});
             this.comboBox5.Location = new System.Drawing.Point(212, 105);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(100, 21);

@@ -32,13 +32,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Flight_id = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,14 +82,6 @@
             this.Flight_id.Text = "Direction_id";
             this.Flight_id.Click += new System.EventHandler(this.Flight_id_Click);
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(144, 224);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 22;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(144, 176);
@@ -112,7 +104,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 23);
             this.button1.TabIndex = 18;
-            this.button1.Text = "button1";
+            this.button1.Text = "add";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -125,13 +117,6 @@
             this.label4.TabIndex = 28;
             this.label4.Text = "Time_of_departure";
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(144, 269);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 27;
-            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(144, 83);
@@ -139,24 +124,42 @@
             this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
             this.numericUpDown1.TabIndex = 29;
             // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(144, 224);
+            this.maskedTextBox2.Mask = "00/00/00";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox2.TabIndex = 31;
+            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(144, 269);
+            this.maskedTextBox3.Mask = "00/00/00";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox3.TabIndex = 32;
+            this.maskedTextBox3.ValidatingType = typeof(System.DateTime);
+            // 
             // Form5_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 349);
+            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Flight_id);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
             this.Name = "Form5_Add";
-            this.Text = "Form5_Add";
+            this.Text = "Adding a direction";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -169,12 +172,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Flight_id;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
     }
 }
