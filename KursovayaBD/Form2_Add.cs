@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace KursovayaBD
 {
@@ -58,6 +59,56 @@ namespace KursovayaBD
         {
 
         }
+
+        private void maskedTextBox1_Leave(object sender, System.EventArgs e)
+        {
+            
+            if (!System.Text.RegularExpressions.Regex.IsMatch(maskedTextBox1.Text, "(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-([6-9][0-9])"))
+            {
+                MessageBox.Show("Something is wrong with your input. \nReturn and check it again.");
+                maskedTextBox1.Text = "";
+            } 
+
+        }
+
+        private void maskedTextBox2_Leave(object sender, System.EventArgs e)
+        {
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(maskedTextBox1.Text, "(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-([0-9][0-9])"))
+            {
+                MessageBox.Show("Something is wrong with your input. \nReturn and check it again."); 
+                maskedTextBox1.Text = "";
+            }
+
+        }
+
+
+        void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)
+        {
+            try
+            {
+                if (!e.IsValidInput)
+                {
+                    MessageBox.Show("The data you supplied must be a valid date in the format mm/dd/yy.");
+                }
+                else
+                {
+
+                    DateTime userDate = (DateTime)e.ReturnValue;
+                    if (userDate >= DateTime.Now)
+                    {
+
+                        MessageBox.Show("The date in this field must be less or equal than today's date.");
+                        e.Cancel = true;
+                    }
+                }
+            }
+            catch (TargetInvocationException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {

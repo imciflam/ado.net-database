@@ -121,8 +121,9 @@ namespace KursovayaBD
         private void textBox4_TextChanged_1(object sender, EventArgs e)
         {
             if (!System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, "^[a-zA-Z]+$"))
-            {
-                textBox4.Text = "";
+            { 
+                var text = textBox4.Text;
+                textBox4.Text = text.Remove(text.Length - 1);
             } 
         }
 
@@ -130,8 +131,9 @@ namespace KursovayaBD
         {
 
             if (!System.Text.RegularExpressions.Regex.IsMatch(textBox5.Text, "^[a-zA-Z]+$"))
-            {
-                textBox5.Text = "";
+            { 
+                var text = textBox5.Text;
+                textBox5.Text = text.Remove(text.Length - 1);
             }
         }
 
@@ -139,7 +141,9 @@ namespace KursovayaBD
         { 
             if (!System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, "^[a-zA-Z]+$"))
             {
-                textBox6.Text = "";
+
+                var text = textBox6.Text;
+                textBox6.Text = text.Remove(text.Length - 1); 
             }
         }
 
