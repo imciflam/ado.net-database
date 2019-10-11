@@ -176,5 +176,33 @@ namespace KursovayaBD
         { 
             numericUpDown3.Value = 0;
         }
+
+        private void materialRaisedButton8_Click(object sender, EventArgs e)
+        {
+            DirectionsDict fa = new DirectionsDict(this);
+            fa.Show();
+            
+        }
+
+        private void materialRaisedButton9_Click(object sender, EventArgs e)
+        {
+            FlightDict fa = new FlightDict(this);
+            fa.Show();
+
+        }
+
+        private void materialRaisedButton10_Click(object sender, EventArgs e)
+        {
+
+            AircraftsDict fa = new AircraftsDict(this);
+            fa.Show();
+        }
+
+        private void materialRaisedButton11_Click(object sender, EventArgs e)
+        {
+
+            PilotsDict fa = new PilotsDict(this);
+            fa.Show();
+        }
     }
 }

@@ -49,6 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AircraftsDict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AircraftsDict.Designer.cs">
+      <DependentUpon>AircraftsDict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectionsDict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectionsDict.Designer.cs">
+      <DependentUpon>DirectionsDict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlightDict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightDict.Designer.cs">
+      <DependentUpon>FlightDict.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,8 +157,23 @@
     <Compile Include="Form9.Designer.cs">
       <DependentUpon>Form9.cs</DependentUpon>
     </Compile>
+    <Compile Include="PilotsDict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PilotsDict.Designer.cs">
+      <DependentUpon>PilotsDict.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AircraftsDict.resx">
+      <DependentUpon>AircraftsDict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectionsDict.resx">
+      <DependentUpon>DirectionsDict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightDict.resx">
+      <DependentUpon>FlightDict.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form9.resx">
       <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PilotsDict.resx">
+      <DependentUpon>PilotsDict.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

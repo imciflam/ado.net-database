@@ -58,6 +58,10 @@
             this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton9 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton10 = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.materialRaisedButton11 = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -418,11 +422,67 @@
             this.materialRaisedButton7.UseVisualStyleBackColor = true;
             this.materialRaisedButton7.Click += new System.EventHandler(this.materialRaisedButton7_Click);
             // 
+            // materialRaisedButton8
+            // 
+            this.materialRaisedButton8.Depth = 0;
+            this.materialRaisedButton8.Location = new System.Drawing.Point(318, 260);
+            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton8.Name = "materialRaisedButton8";
+            this.materialRaisedButton8.Primary = true;
+            this.materialRaisedButton8.Size = new System.Drawing.Size(17, 20);
+            this.materialRaisedButton8.TabIndex = 35;
+            this.materialRaisedButton8.Text = ">";
+            this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            this.materialRaisedButton8.Click += new System.EventHandler(this.materialRaisedButton8_Click);
+            // 
+            // materialRaisedButton9
+            // 
+            this.materialRaisedButton9.Depth = 0;
+            this.materialRaisedButton9.Location = new System.Drawing.Point(318, 286);
+            this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton9.Name = "materialRaisedButton9";
+            this.materialRaisedButton9.Primary = true;
+            this.materialRaisedButton9.Size = new System.Drawing.Size(17, 20);
+            this.materialRaisedButton9.TabIndex = 36;
+            this.materialRaisedButton9.Text = ">";
+            this.materialRaisedButton9.UseVisualStyleBackColor = true;
+            this.materialRaisedButton9.Click += new System.EventHandler(this.materialRaisedButton9_Click);
+            // 
+            // materialRaisedButton10
+            // 
+            this.materialRaisedButton10.Depth = 0;
+            this.materialRaisedButton10.Location = new System.Drawing.Point(318, 315);
+            this.materialRaisedButton10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton10.Name = "materialRaisedButton10";
+            this.materialRaisedButton10.Primary = true;
+            this.materialRaisedButton10.Size = new System.Drawing.Size(17, 20);
+            this.materialRaisedButton10.TabIndex = 37;
+            this.materialRaisedButton10.Text = ">";
+            this.materialRaisedButton10.UseVisualStyleBackColor = true;
+            this.materialRaisedButton10.Click += new System.EventHandler(this.materialRaisedButton10_Click);
+            // 
+            // materialRaisedButton11
+            // 
+            this.materialRaisedButton11.Depth = 0;
+            this.materialRaisedButton11.Location = new System.Drawing.Point(318, 341);
+            this.materialRaisedButton11.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton11.Name = "materialRaisedButton11";
+            this.materialRaisedButton11.Primary = true;
+            this.materialRaisedButton11.Size = new System.Drawing.Size(17, 20);
+            this.materialRaisedButton11.TabIndex = 38;
+            this.materialRaisedButton11.Text = ">";
+            this.materialRaisedButton11.UseVisualStyleBackColor = true;
+            this.materialRaisedButton11.Click += new System.EventHandler(this.materialRaisedButton11_Click);
+            // 
             // Form1_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 473);
+            this.Controls.Add(this.materialRaisedButton11);
+            this.Controls.Add(this.materialRaisedButton10);
+            this.Controls.Add(this.materialRaisedButton9);
+            this.Controls.Add(this.materialRaisedButton8);
             this.Controls.Add(this.materialRaisedButton7);
             this.Controls.Add(this.materialRaisedButton6);
             this.Controls.Add(this.materialRaisedButton5);
@@ -495,5 +555,9 @@
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton7;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton9;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton10;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton11;
     }
 }
